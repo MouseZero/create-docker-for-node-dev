@@ -1,0 +1,27 @@
+{
+  "name": "create-docker-for-node-dev",
+  "version": "1.0.0",
+  "description": "Quick start with Docker for Node developers.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MouseZero/create-docker-for-node-dev.git"
+  },
+  "keywords": [
+    "create",
+    "docker",
+    "node",
+    "developer",
+    "development",
+    "programmer"
+  ],
+  "author": "Russell Murray",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MouseZero/create-docker-for-node-dev/issues"
+  },
+  "homepage": "https://github.com/MouseZero/create-docker-for-node-dev#readme"
+}

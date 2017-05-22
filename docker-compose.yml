@@ -1,0 +1,12 @@
+version: '3'
+services:
+  node:
+    image: node:7.8.0
+    stdin_open: true
+    tty: true
+    ports:
+      - "3000:3000"
+    entrypoint:
+      - /bin/bash
+    volumes:
+      - .:/home/node
