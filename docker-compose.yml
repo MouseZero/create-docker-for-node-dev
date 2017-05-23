@@ -2,11 +2,31 @@ version: '3'
 services:
   node:
     image: node:7.8.0
+    build:
+      context: .
+      dockerfile: ./docker/dev.node.dockerfile
     stdin_open: true
     tty: true
     ports:
       - "3000:3000"
+    env_file:
+      - ./docker/dev.postgres.env
     entrypoint:
       - /bin/bash
     volumes:
       - .:/home/node
+    networks:
+      - nodeapp-network
+
+  postgres:
+    image: postgres:9.6
+    ports:
+      - "5432:5432"
+    env_file:
+      - ./docker/dev.postgres.env
+    networks:
+      - nodeapp-network
+
+networks:
+  nodeapp-network:
+    driver: bridge
